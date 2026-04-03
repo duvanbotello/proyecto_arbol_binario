@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arbol Binario de Busqueda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Proyecto Migrado a Web</p>
+      <h1>Arbol Binario de Busqueda</h1>
+      <p class="subtitle">Version estatica para GitHub Pages. Inserta nodos, recorre el arbol y visualiza su estructura en tiempo real.</p>
+    </header>
+
+    <section class="panel controls">
+      <div class="field">
+        <label for="valueInput">Valor entero</label>
+        <input id="valueInput" type="number" placeholder="Ej: 42" step="1">
+      </div>
+      <div class="buttons">
+        <button id="insertBtn" class="btn primary">Insertar</button>
+        <button id="searchBtn" class="btn">Buscar</button>
+        <button id="deleteBtn" class="btn danger">Borrar</button>
+        <button id="parentBtn" class="btn">Buscar padre</button>
+        <button id="childrenBtn" class="btn">Buscar hijos</button>
+      </div>
+      <div class="buttons">
+        <button id="pruneBtn" class="btn">Podar hojas</button>
+        <button id="deleteMinBtn" class="btn">Borrar menor</button>
+        <button id="deleteMaxBtn" class="btn">Borrar mayor</button>
+        <button id="clearBtn" class="btn ghost">Limpiar arbol</button>
+      </div>
+      <div class="traversals">
+        <button id="preBtn" class="btn small">Preorden</button>
+        <button id="inBtn" class="btn small">Inorden</button>
+        <button id="postBtn" class="btn small">Postorden</button>
+      </div>
+      <p id="message" class="message">Listo para comenzar.</p>
+      <p id="traversalResult" class="traversal-output"></p>
+    </section>
+
+    <section class="stats-grid">
+      <article class="panel stat"><span>Nodos</span><strong id="nodesCount">0</strong></article>
+      <article class="panel stat"><span>Hojas</span><strong id="leavesCount">0</strong></article>
+      <article class="panel stat"><span>Menor</span><strong id="minValue">-</strong></article>
+      <article class="panel stat"><span>Mayor</span><strong id="maxValue">-</strong></article>
+    </section>
+
+    <section class="panel tree-panel">
+      <h2>Representacion grafica</h2>
+      <div id="treeCanvas" class="tree-canvas">
+        <p class="empty">El arbol esta vacio.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
